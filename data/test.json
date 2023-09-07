@@ -1,0 +1,6 @@
+{
+  "test" : {
+    "value1": "jsonvalue1",
+    "value2": 2
+  }
+}
