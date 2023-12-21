@@ -3,7 +3,7 @@ import math
 
 
 def task(csv_str: str):
-    reader = csv.reader(csv_string.splitlines(), delimiter=',')
+    reader = csv.reader(csv_str.splitlines(), delimiter=',')
     data = list(reader)
     count = len(data)
     entropy_sum = 0
@@ -19,7 +19,6 @@ def task(csv_str: str):
 
 
 if __name__ == '__main__':
-    csv_string = '1,0,4,0,0\n2,1,2,0,0\n2,1,0,1,1\n0,1,0,1,1\n0,1,0,2,1\n0,1,0,2,1\n'
-    csv_string2 = '1,0,2,0,0\n2,1,2,0,0\n2,1,0,1,1\n0,1,0,1,1\n0,1,0,1,1\n0,1,0,1,1\n'
-    entropy = task(csv_string)
+    csv_data = '1,0,4,0,0\n2,1,2,0,0\n2,1,0,1,1\n0,1,0,1,1\n0,1,0,2,1\n0,1,0,2,1\n'
+    entropy = task(csv_data)
     print(entropy)
