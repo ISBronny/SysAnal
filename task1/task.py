@@ -9,7 +9,6 @@ def task(file: str, address: Tuple[int, int]):
         return list(reader)[address[0]][address[0] - 1]
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
