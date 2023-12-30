@@ -23,7 +23,7 @@ def create_template(args):
     return template, reviews_count
 
 
-def create_matrix(template, reviews_count, *reviews):
+def create_matrix(template, *reviews):
     matrix = []
     for reviews_str in reviews:
         reviews = parse_reviews(reviews_str)
@@ -38,7 +38,7 @@ def create_matrix(template, reviews_count, *reviews):
 
         matrix.append(reviews_list)
 
-    return matrix, reviews_count
+    return matrix
 
 
 def calculate(matrix, reviews_count, experts_count):
@@ -51,7 +51,7 @@ def calculate(matrix, reviews_count, experts_count):
 
 def task(*args):
     template, reviews_count = create_template(args)
-    matrix, reviews_count = create_matrix(template, reviews_count, *args)
+    matrix = create_matrix(template,  *args)
     result = calculate(matrix, reviews_count, len(args))
 
     return result
